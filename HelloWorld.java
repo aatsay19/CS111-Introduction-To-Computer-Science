@@ -3,8 +3,7 @@
  *  Execution:    java HelloWorld
  *
  *  @author: Aatif Sayed
- *	NetID:   as3259
- *	E-mail:  as3259@rutgers.edu
+ *	E-mail:  aatif.sayed@rutgers.edu
  *
  *  Prints "Hello, World". By tradition, this is everyone's first program.
  *
