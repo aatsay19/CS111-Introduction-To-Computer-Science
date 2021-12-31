@@ -24,23 +24,26 @@ public class WindChill {
 
         double temperature = 0.0, velocity = 0.0;
 
-        /* Check that exactly 2 command-line arguments are provided; no more, no less.
+        /* Check that exactly 2 numerical command-line arguments are provided; no more, no less.
            If not, display error message on console and terminate program. */
         if (args.length != 2) {
-            System.out.println("USAGE ERROR: Program must have exactly two command-line argument inputs: [temperature] [velocity]");
+            System.out.println("USAGE ERROR: Program must have exactly 2 numerical command-line argument inputs: [temperature] [velocity]");
+            System.out.println("Terminating program...");
             return;
         }
 
-        /* Parse user-given command-line arguments to Double data type to be used later for wind chill calculation
-           Handle non-numeric inputs by displaying error message to console and terminating program. */
+        /* Parse user-given command-line arguments to Double data type to be used later for wind chill calculation.
+           Handle non-numeric inputs by displaying error message to console and terminating program (input validation). */
         try { temperature = Double.parseDouble(args[0]); }
-        catch (Exception generalException) {
+        catch (Exception _exception) {
             System.out.println("INPUT ERROR: Non-numeric temperature detected");
+            System.out.println("Terminating program...");
             return;
         }
         try { velocity = Double.parseDouble(args[1]); }
-        catch (Exception generalException) {
+        catch (Exception _exception) {
             System.out.println("INPUT ERROR: Non-numeric velocity detected");
+            System.out.println("Terminating program...");
             return;
         }
 
@@ -49,6 +52,7 @@ public class WindChill {
            If formula becomes invalid, display error message on console and terminate program. */ 
         if (Math.abs(temperature) > 50 || velocity > 120 || velocity < 3) {
             System.out.println("RANGE ERROR: Temperature must be between -50 and 50 degrees Farenheit and velocity must be between 3 and 120 mph");
+            System.out.println("Terminating program...");
             return;
         }
 
