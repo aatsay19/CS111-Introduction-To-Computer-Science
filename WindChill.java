@@ -56,6 +56,7 @@ public class WindChill {
             return;
         }
 
+        // Calculate wind chill based on the given formula and print it to the console (formatted to 3 decimal places)
     	double windChill = (35.74 + 0.6215 * temperature + (0.4275 * temperature - 35.75) * Math.pow(velocity, 0.16));
         System.out.println("Wind Chill: " + String.format("%.3f", windChill) + " degrees Farenheit");
 
